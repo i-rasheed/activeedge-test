@@ -25,9 +25,29 @@ export default function AlbumPhotos() {
         allAlbumPhoto();   
     }, [])
 
-    return (
-        <div>
-            
-        </div>
-    )
+    return <div>
+    <h1>Album Photos</h1>
+    { loading? (
+            <h1>Loading...</h1>
+        ) : error? (
+            <h1>{error}</h1>
+        ) :
+        <table className="table">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>Photo</th>
+        </tr>
+        </thead>
+        <tbody>
+        {albumPhotos.map((albumPhoto) => (
+            <tr key={albumPhoto.id}>
+            <td>{albumPhoto.id}</td>
+            <td>{albumPhoto.title}</td>
+            </tr>
+        ))}
+        </tbody>
+    </table>
+}
+</div>
 }
