@@ -45,18 +45,11 @@ export default function ArtistAlbum() {
                         <button
                         type="button"
                         className="small"
-                        //   onClick={() =>
-                        //     props.history.push(`/product/${product._id}/edit`)
-                        //   }
+                          onClick={() =>
+                            props.history.push(`/albums/${artistAlbum.userId}/photos`)
+                          }
                         >
-                        Edit
-                        </button>
-                        <button
-                        type="button"
-                        className="small"
-                        //   onClick={() => deleteHandler(product)}
-                        >
-                        Delete
+                        Get album photos
                         </button>
                     </td>
                     </tr>

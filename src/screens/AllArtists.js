@@ -50,24 +50,6 @@ export default function AllArtists() {
                     <td>{artist.email}</td>
                     <td>{artist.phone}</td>
                     <td>{artist.website}</td>
-                    <td>
-                        <button
-                        type="button"
-                        className="small"
-                        //   onClick={() =>
-                        //     props.history.push(`/product/${product._id}/edit`)
-                        //   }
-                        >
-                        Edit
-                        </button>
-                        <button
-                        type="button"
-                        className="small"
-                        //   onClick={() => deleteHandler(product)}
-                        >
-                        Delete
-                        </button>
-                    </td>
                     </tr>
                 ))}
                 </tbody>
