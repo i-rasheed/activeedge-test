@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route} from "react-router-dom";
 import AllArtists from './screens/AllArtists';
 import ArtistAlbum from './screens/ArtistAlbum';
 import ArtistCrud from './screens/ArtistCrud';
