@@ -10,10 +10,10 @@ export default function AlbumPhotos(props) {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        const allAlbumPhoto = () =>{
+        const allAlbumPhoto = async () =>{
            try{
                setLoading(true)
-                const albumPhotosRes = Axios.get(`https://jsonplaceholder.typicode.com/albums/${albumId}/photos`)
+                const albumPhotosRes = await Axios.get(`https://jsonplaceholder.typicode.com/albums/${albumId}/photos`)
                 setLoading(false)
                 setAlbumPhotos(albumPhotosRes.data)
                 console.log(albumPhotos)
