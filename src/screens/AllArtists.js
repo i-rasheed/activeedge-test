@@ -7,12 +7,12 @@ export default function AllArtists() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        const allArtists = () =>{
+        const allArtists = async () =>{
            try{
                setLoading(true)
-                const allArtistRes = Axios.get('https://jsonplaceholder.typicode.com/users')
+                const allArtistRes = await Axios.get('https://jsonplaceholder.typicode.com/users')
                 setLoading(false)
-                setArtist(allArtistRes.data)
+                setArtist(allArtistRes)
                 console.log(artists)
            } catch(error) {
                 setLoading(false)
