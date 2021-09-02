@@ -1,6 +1,7 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
+import Axios from 'axios'
 
-export default function ArtistAlbum() {
+export default function ArtistAlbum(props) {
     const [artistAlbums, setArtistAlbums ] = useState([])
     const [error, setError] = useState()
     const [loading, setLoading] = useState(true)
