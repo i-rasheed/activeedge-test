@@ -7,10 +7,10 @@ export default function ArtistAlbum(props) {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        const albums = () =>{
+        const albums = async() =>{
            try{
                setLoading(true)
-                const artistAlbumRes = Axios.get('https://jsonplaceholder.typicode.com/albums')
+                const artistAlbumRes = await Axios.get('https://jsonplaceholder.typicode.com/albums')
                 setLoading(false)
                 setArtistAlbums(artistAlbumRes)
                 console.log(artistAlbums)
