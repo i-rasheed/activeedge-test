@@ -6,6 +6,7 @@ import AllArtists from './screens/AllArtists';
 import ArtistAlbum from './screens/ArtistAlbum';
 import ArtistTweet from './screens/ArtistTweet';
 import CreateTweet from './screens/CreateTweet';
+import EditTweet from './screens/EditTweet'
 
 export default function App() {
     return (
@@ -16,6 +17,7 @@ export default function App() {
             <Route path="/album"  component={ArtistAlbum} />
             <Route path="/tweet"  component={ArtistTweet} />
             <Route path="/create"  component={CreateTweet} />
+            <Route path="/edit/:id"  component={EditTweet} />
             <Route path="/albums/:id/photos"  component={AlbumPhotos} />
         </div>   
         </BrowserRouter>

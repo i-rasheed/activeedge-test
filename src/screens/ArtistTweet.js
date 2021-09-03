@@ -1,10 +1,11 @@
 import React,{useState, useEffect} from 'react'
 import Axios from 'axios'
 
-export default function ArtistTweet() {
+export default function ArtistTweet(props) {
     const [artistTweet, setArtistTweet ] = useState([])
     const [error, setError] = useState()
     const [loading, setLoading] = useState(true)
+    const [response, setResponse] = useState('')
 
     useEffect(() => {
         const artistTweet = async () =>{
@@ -23,9 +24,24 @@ export default function ArtistTweet() {
         }
         artistTweet();   
     }, [])
+
+    const deleteTweet = async (id) => {
+        try{
+            const deleteRes = await Axios.delete(`https://jsonplaceholder.typicode.com/comments/${id}`)
+            if(deleteRes.data){
+                setResponse('Successfully deleted tweet')
+            }
+            artistTweet.filter(el => el.id !== id)
+        }catch(err){
+            setError(err.message)
+        }
+        
+    }
+
     return (
         <div>
             <h1>Artist Tweet</h1>
+            {response && <p>{response}</p>}
             { loading? (
                     <h1>Loading...</h1>
                 ) : error? (
@@ -47,6 +63,26 @@ export default function ArtistTweet() {
                     <td>{artist.name}</td>
                     <td>{artist.email}</td>
                     <td>{artist.body}</td>
+                    <td>
+                        <button
+                        type="button"
+                        className="small"
+                          onClick={() =>
+                            props.history.push(`/edit/${artist.id}`)
+                          }
+                        >
+                        Edit
+                        </button>
+                    </td>
+                    <td>
+                        <button
+                        type="button"
+                        className="small"
+                        onClick={deleteTweet(artist.id)}
+                         >
+                       Delete
+                        </button>
+                    </td>
                     </tr>
                 ))}
                 </tbody>
