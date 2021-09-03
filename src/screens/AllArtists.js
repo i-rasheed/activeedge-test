@@ -12,7 +12,7 @@ export default function AllArtists() {
                setLoading(true)
                 const allArtistRes = await Axios.get('https://jsonplaceholder.typicode.com/users')
                 setLoading(false)
-                setArtist(allArtistRes)
+                setArtist(allArtistRes.data)
                 console.log(artists)
            } catch(error) {
                 setLoading(false)
