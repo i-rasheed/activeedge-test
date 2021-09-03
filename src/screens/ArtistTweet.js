@@ -78,7 +78,7 @@ export default function ArtistTweet(props) {
                         <button
                         type="button"
                         className="small"
-                        onClick={deleteTweet(artist.id)}
+                        onClick={() => deleteTweet(artist.id)}
                          >
                        Delete
                         </button>

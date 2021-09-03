@@ -6,7 +6,8 @@ import AllArtists from './screens/AllArtists';
 import ArtistAlbum from './screens/ArtistAlbum';
 import ArtistTweet from './screens/ArtistTweet';
 import CreateTweet from './screens/CreateTweet';
-import EditTweet from './screens/EditTweet'
+import EditTweet from './screens/EditTweet';
+
 
 export default function App() {
     return (

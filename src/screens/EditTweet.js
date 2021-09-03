@@ -9,11 +9,10 @@ const EditTweet = (props) => {
     const [body, setBody] = useState()
     const [error, setError] = useState()
     const [response, setResponse] = useState()
-    const [isLoading, setIsLoading] = useState()
+    const [isLoading, setIsLoading] = useState(false)
 
-    
-    
 
+    const commentId = props.match.params.id
     
 
     const handleNameChange = (e) => {
@@ -36,7 +35,7 @@ const EditTweet = (props) => {
                 body
             }
 
-            const commentId = props.match.params.id
+            
 
         try { 
             setIsLoading(true)
@@ -60,7 +59,7 @@ const EditTweet = (props) => {
                 response? (<h1>{response}</h1>):
                 isLoading? (<h1>please wait...</h1>) : ""}
                 <ValidatorForm
-                ref="form"
+                useRef="form"
                 onSubmit={handleSubmit}
                 onError={errors => console.log(errors)}
                 >
