@@ -14,6 +14,9 @@ export default function NavBar() {
                     <li class="nav-item active">
                         <Link className="nav-link" to='/album'>Albums<span class="sr-only">(current)</span></Link>
                     </li>
+                    <li class="nav-item active">
+                        <Link className="nav-link" to='/tweet'>Tweets<span class="sr-only">(current)</span></Link>
+                    </li>
                     </ul>
                 </div>
             </nav>
