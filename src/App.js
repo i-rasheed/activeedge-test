@@ -4,8 +4,8 @@ import NavBar from './components/NavBar';
 import AlbumPhotos from './screens/AlbumPhotos';
 import AllArtists from './screens/AllArtists';
 import ArtistAlbum from './screens/ArtistAlbum';
-import ArtistCrud from './screens/ArtistCrud';
 import ArtistTweet from './screens/ArtistTweet';
+import CreateTweet from './screens/CreateTweet';
 
 export default function App() {
     return (
@@ -15,7 +15,7 @@ export default function App() {
             <Route path="/" exact component={AllArtists} />
             <Route path="/album"  component={ArtistAlbum} />
             <Route path="/tweet"  component={ArtistTweet} />
-            <Route path="/crud"  component={ArtistCrud} />
+            <Route path="/create"  component={CreateTweet} />
             <Route path="/albums/:id/photos"  component={AlbumPhotos} />
         </div>   
         </BrowserRouter>

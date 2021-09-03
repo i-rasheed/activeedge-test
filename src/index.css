@@ -6,3 +6,7 @@ button {
     display: flex;
     justify-content: space-between;
 }
+
+.tweet-wrapper{
+    text-align: center;
+}
