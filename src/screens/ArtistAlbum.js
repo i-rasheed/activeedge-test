@@ -47,7 +47,7 @@ export default function ArtistAlbum(props) {
                         type="button"
                         className="small"
                           onClick={() =>
-                            props.history.push(`/albums/${artistAlbum.userId}/photos`)
+                            props.history.push(`/albums/${artistAlbum.id}/photos`)
                           }
                         >
                         Get album photos
